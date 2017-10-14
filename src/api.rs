@@ -528,6 +528,7 @@ pub mod unversioned {
 
 /// Endpoints that are unstable
 pub mod unstable {
+
     /// e2e key management
     pub mod keys {
         endpoint!(
@@ -535,5 +536,19 @@ pub mod unstable {
             [unstable, keys],
             upload
         );
+
+        endpoint!(
+            /// Get current devices and identity keys for users
+            [unstable, keys],
+            query
+        );
+
+        endpoint!(
+            /// Claim one-time keys for devices
+            [unstable, keys],
+            claim
+        );
+
+        // TODO: changes endpoint
     }
 }
