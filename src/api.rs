@@ -525,3 +525,15 @@ pub mod unversioned {
         get_supported_versions
     );
 }
+
+/// Endpoints that are unstable
+pub mod unstable {
+    /// e2e key management
+    pub mod keys {
+        endpoint!(
+            /// Upload e2e keys to the homeserver
+            [unstable, keys],
+            upload
+        );
+    }
+}
